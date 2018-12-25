@@ -19,6 +19,7 @@
 package Game;
 
 import Client.FlushableGZIPOutputStream;
+import Client.JConfig;
 import Client.Launcher;
 import Client.Logger;
 import Client.Settings;
@@ -247,7 +248,7 @@ public class Replay {
           Launcher.icon_warn);
       return false;
     }
-    Game.getInstance().getJConfig().changeWorld(6);
+    Game.getInstance().getJConfig().changeWorld(JConfig.SERVER_WORLD_COUNT + 1);
     replayServer = new ReplayServer(replayDirectory);
     replayThread = new Thread(replayServer);
     replayThread.start();
