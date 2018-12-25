@@ -46,7 +46,7 @@ import javax.swing.JOptionPane;
 public class Replay {
   // If we ever change replays in a way that breaks backwards compatibility,
   // we need to increment this
-  public static int VERSION = 4;
+  public static int VERSION = 5;
 
   static DataOutputStream output = null;
   static DataOutputStream input = null;
