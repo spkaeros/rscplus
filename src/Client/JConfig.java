@@ -165,13 +165,17 @@ public class JConfig {
 
     // Clip world to world count
     if (world > SERVER_WORLD_COUNT) world = SERVER_WORLD_COUNT;
-    else if (world < 1) world = 1;
+    else if (world < 0) world = 0;
 
     parameters.put("nodeid", "" + (5000 + world));
-    if (world == 1) parameters.put("servertype", "" + 3);
-    else parameters.put("servertype", "" + 1);
+    // TODO: This might have meant veteran world
+    //if (world == 1) parameters.put("servertype", "" + 3);
+    parameters.put("servertype", "" + 1);
 
-    m_data.put("codebase", "http://classic" + world + "." + SERVER_URL + "/");
+    if (world == 0)
+      m_data.put("codebase", "http://127.0.0.1/");
+    else
+      m_data.put("codebase", "http://classic" + world + "." + SERVER_URL + "/");
 
     // Update settings
     Settings.WORLD.put(Settings.currentProfile, world);

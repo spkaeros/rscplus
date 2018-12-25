@@ -1047,8 +1047,8 @@ public class Settings {
       save("custom");
     }
 
-    if (WORLD.get("custom") < 1) {
-      WORLD.put("custom", 1);
+    if (WORLD.get("custom") < 0) {
+      WORLD.put("custom", 0);
       save("custom");
     } else if (WORLD.get("custom") > JConfig.SERVER_WORLD_COUNT) {
       WORLD.put("custom", JConfig.SERVER_WORLD_COUNT);
