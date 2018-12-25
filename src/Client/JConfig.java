@@ -30,6 +30,8 @@ public class JConfig {
   // Server information
   public static final String SERVER_URL = "rscminus.com";
   public static final int SERVER_WORLD_COUNT = 1;
+  public static final String SERVER_RSA_EXPONENT = "65537";
+  public static final String SERVER_RSA_MODULUS = "8919358150844327671615194210081641058246796695652439261191309391046895650925408172336904532376967683135742637126732712594033167816708824171632934946881859";
 
   // Official client version information, subversion uses 'other_sub_version'
   public static final int VERSION = 124;
